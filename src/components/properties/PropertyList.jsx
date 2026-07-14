@@ -327,16 +327,50 @@ function handleFotosChange(event) {
     );
     return;
   }
-
   if (Number(precio) <= 0) {
-    await Swal.fire(
-      "Precio inválido",
-      "El precio debe ser mayor que cero.",
-      "warning"
-    );
-    return;
-  }
+  await Swal.fire(
+    "Precio inválido",
+    "El precio debe ser mayor que 0.",
+    "warning"
+  );
+  return;
+}
 
+  if (!Number.isInteger(Number(precio))) {
+  await Swal.fire(
+    "Precio inválido",
+    "El precio debe ser un número entero.",
+    "warning"
+  );
+  return;
+}
+if (
+  (tipo === "Casa" &&
+    (
+      Number(dormitorios) <= 0 ||
+      Number(banos) <= 0 ||
+      Number(areaConstruida) <= 0 ||
+      Number(areaTerreno) <= 0
+    )) ||
+
+  (tipo === "Departamento" &&
+    (
+      Number(dormitorios) <= 0 ||
+      Number(banos) <= 0 ||
+      Number(areaConstruida) <= 0
+    )) ||
+
+  (tipo === "Terreno" &&
+    Number(areaTerreno) <= 0)
+) {
+  await Swal.fire(
+    "Valor inválido",
+    "Todos los campos obligatorios deben ser mayores que 0.",
+    "warning"
+  );
+
+  return;
+}
   const fechaSeleccionada = new Date(`${fecha}T00:00:00`);
   const fechaActual = new Date();
   fechaActual.setHours(0, 0, 0, 0);
