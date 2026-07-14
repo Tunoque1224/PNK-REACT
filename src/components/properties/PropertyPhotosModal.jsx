@@ -30,7 +30,7 @@ function PropertyPhotosModal({
               <Col md={4} className="mb-4" key={foto.id}>
                 <div className="border rounded p-2 h-100 text-center">
                   <img
-                    src={`http://localhost:82/PNK-INMOBILIARIA/${foto.ruta}`}
+                    src={`http://98.90.238.74/${foto.ruta}`}
                     alt="Propiedad"
                     width="100%"
                     height="220"

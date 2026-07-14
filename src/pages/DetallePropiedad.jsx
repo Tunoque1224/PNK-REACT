@@ -102,7 +102,7 @@ function DetallePropiedad() {
                     <Carousel.Item key={foto.id}>
                       <img
                         className="d-block w-100"
-                        src={`http://localhost:82/PNK-INMOBILIARIA/${foto.ruta}`}
+                        src={`http://98.90.238.74/${foto.ruta}`}
                         alt="Fotografía de la propiedad"
                         style={{
                           height: "480px",

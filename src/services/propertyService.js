@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:82/PNK-INMOBILIARIA/api/propiedades.php";
+const API_URL = "http://98.90.238.74/api/propiedades.php";
 
 export async function obtenerPropiedades() {
   const respuesta = await fetch(API_URL, {
@@ -44,7 +44,7 @@ export async function guardarPropiedad(propiedad) {
 }
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/guardar_propiedad.php",
+    "http://98.90.238.74/api/guardar_propiedad.php",
     {
       method: "POST",
       body: datos,
@@ -84,7 +84,7 @@ export async function actualizarPropiedad(propiedad) {
   });
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/actualizar_propiedad.php",
+    "http://98.90.238.74/api/actualizar_propiedad.php",
     {
       method: "POST",
       body: datos,
@@ -107,7 +107,7 @@ export async function eliminarPropiedad(id) {
   datos.append("id", id);
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/eliminar_propiedad.php",
+    "http://98.90.238.74/api/eliminar_propiedad.php",
     {
       method: "POST",
       body: datos,
@@ -127,7 +127,7 @@ export async function eliminarPropiedad(id) {
 }
 export async function obtenerFotosPropiedad(idPropiedad) {
   const respuesta = await fetch(
-    `http://localhost:82/PNK-INMOBILIARIA/api/fotos_propiedad.php?id_propiedad=${idPropiedad}`,
+    `http://98.90.238.74/api/fotos_propiedad.php?id_propiedad=${idPropiedad}`,
     {
       method: "GET",
       credentials: "include",
@@ -151,7 +151,7 @@ export async function marcarFotoPrincipal(idFoto, idPropiedad) {
   datos.append("id_propiedad", idPropiedad);
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/marcar_foto_principal.php",
+    "http://98.90.238.74/api/marcar_foto_principal.php",
     {
       method: "POST",
       body: datos,
@@ -177,7 +177,7 @@ export async function eliminarFoto(idFoto, idPropiedad) {
   datos.append("id_propiedad", idPropiedad);
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/eliminar_foto.php",
+    "http://98.90.238.74/api/eliminar_foto.php",
     {
       method: "POST",
       body: datos,
@@ -202,7 +202,7 @@ export async function cambiarEstadoPropiedad(id, estado) {
   datos.append("estado", estado);
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/cambiar_estado_propiedad.php",
+    "http://98.90.238.74/api/cambiar_estado_propiedad.php",
     {
       method: "POST",
       body: datos,

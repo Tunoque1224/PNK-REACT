@@ -1,5 +1,5 @@
 const API_URL =
-  "http://localhost:82/PNK-INMOBILIARIA/api/login.php";
+  "http://98.90.238.74/api/login.php";
 
 const USER_KEY = "pnk_user";
 

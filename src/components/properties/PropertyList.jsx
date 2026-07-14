@@ -705,7 +705,7 @@ return (
                     <td>
 {propiedad.imagen_principal ? (
     <img
-      src={`http://localhost:82/PNK-INMOBILIARIA/${propiedad.imagen_principal}`}
+      src={`http://98.90.238.74/${propiedad.imagen_principal}`}
       alt="Imagen principal"
       width="110"
       height="80"

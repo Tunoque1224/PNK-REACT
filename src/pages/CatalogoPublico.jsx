@@ -192,7 +192,7 @@ function limpiarFiltros() {
                   {propiedad.imagen_principal ? (
                     <Card.Img
                       variant="top"
-                      src={`http://localhost:82/PNK-INMOBILIARIA/${propiedad.imagen_principal}`}
+                      src={`http://98.90.238.74/${propiedad.imagen_principal}`}
                       alt={propiedad.descripcion}
                       style={{
                         height: "220px",

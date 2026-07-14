@@ -1,5 +1,5 @@
 const API_URL =
-  "http://localhost:82/PNK-INMOBILIARIA/api/propiedades_publicas.php";
+  "http://98.90.238.74/api/propiedades_publicas.php";
 
 export async function obtenerPropiedadesPublicas() {
   const respuesta = await fetch(API_URL);
@@ -16,7 +16,7 @@ export async function obtenerPropiedadesPublicas() {
 }
 export async function obtenerDetallePropiedad(id) {
   const respuesta = await fetch(
-    `http://localhost:82/PNK-INMOBILIARIA/api/detalle_propiedad_publica.php?id=${id}`
+    `http://98.90.238.74/api/detalle_propiedad_publica.php?id=${id}`
   );
 
   let resultado;

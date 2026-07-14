@@ -1,5 +1,5 @@
 const API_URL =
-  "http://localhost:82/PNK-INMOBILIARIA/api/registrar_propietario.php";
+  "http://98.90.238.74/api/registrar_propietario.php";
 
 export async function registrarPropietario(datosRegistro) {
   const datos = new FormData();

@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:82/PNK-INMOBILIARIA/api/usuarios.php";
+const API_URL = "http://98.90.238.74/api/usuarios.php";
 
 export async function obtenerUsuarios() {
   const respuesta = await fetch(API_URL, {
@@ -16,7 +16,7 @@ export async function eliminarUsuario(id) {
   datos.append("id", id);
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/eliminar_usuario.php",
+    "http://98.90.238.74/api/eliminar_usuario.php",
     {
       method: "POST",
       body: datos,
@@ -41,7 +41,7 @@ export async function actualizarUsuario(usuario) {
   datos.append("estado", usuario.estado);
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/actualizar_usuario.php",
+    "http://98.90.238.74/api/actualizar_usuario.php",
     {
       method: "POST",
       body: datos,
@@ -66,7 +66,7 @@ export async function guardarUsuario(usuario) {
   datos.append("rol", usuario.rol);
 
   const respuesta = await fetch(
-    "http://localhost:82/PNK-INMOBILIARIA/api/guardar_usuario.php",
+    "http://98.90.238.74/api/guardar_usuario.php",
     {
       method: "POST",
       body: datos,
